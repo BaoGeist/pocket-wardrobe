@@ -1,0 +1,24 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+  <br/><br/>
+  <div class="container">
+    <h1 style = "margin-left:-40px; font-size:55px" class="display-1">repeated outfits putting you on thin ice?<br/> overwhelmed with choices?<br/>bed full of clothes?</h1>
+  </div>
+  <br />
+
+
+  <img style = "float:right; margin-top:-50px" width = "450" height = "450" src="{% static 'images/wardrobe.jpg' %}" alt="...">
+  <br/><br/>
+  <div class="container">
+    <h1 class="display-5"><b><span style = "margin-left:-40px;color:#66BDE8"> pocket wardrobe </span> </b> is here to help!</h1>
+  </div>
+  <br/><br/><br/><br/>
+  <a href="{% url 'home-input' %}" class="button" style="background-color:#D0C462; margin-left:80px; font-size:36px">get started</a>
+
+{% endblock content %}
+
+    
+

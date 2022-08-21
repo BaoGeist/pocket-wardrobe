@@ -1,0 +1,54 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+  <input class="form-control form-control-lg" list="datalistOptions" id="exampleDataList" placeholder="Enter colour here :D" style="margin-top:20px" id='clin'>
+  <button type="submit" onclick='myfunction();'>Submit</button>
+  <datalist id="datalistOptions">
+    <option value="Blue">
+    <option value="Red">
+    <option value="Green">
+    <option value="Yellow">
+    <option value="Orange">
+  </datalist>
+
+  <div class="container text-center">
+    <div class="row align-items-start">
+      {% for piece in outfit %}
+        <div class="col bg-light p-3 border border border-info" style = "border-radius:15px; margin:20px">
+          <p class="fs-4">
+            {% if forloop.counter0|divisibleby:2 %}
+              Top
+            {% else %}
+              Bottom
+            {% endif %}
+          </p>
+          <img src="{{ piece.clothing.url }}" class="img-fluid" alt=""style = "border-radius:10px; height:275px">
+        </div>
+      {% endfor %}
+      <div class="col bg-light p-3 border border border-info"style = "border-radius:15px; margin:20px;">
+        <p class="fs-4">Shoes</p>
+        <img src="{% static 'images/sho.png' %}" class="img-fluid" alt=""style = "border-radius:10px; height:275px">
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <div class="row align-items-start">
+        <div class="col bg-light p-3 border border border-info" style = "border-radius:15px; margin:20px ">
+          <p class="fs-4">Coat</p>
+          <img src="clothing/3.jpg" class="img-fluid" alt=""style = "border-radius:10px">
+        </div>
+        <div class="col bg-light p-3 border border border-info"style = "border-radius:15px; margin:20px">
+          <p class="fs-4">Accessories</p>
+          <img src="clothing/3.jpg" class="img-fluid" alt=""style = "border-radius:10px">
+        </div>
+        <div class="col bg-light p-3 border border border-info"style = "border-radius:15px; margin:20px;">
+          <p class="fs-4">Other</p>
+          <img src="clothing/3.jpg" class="img-fluid" alt=""style = "border-radius:10px">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+{% endblock content %}

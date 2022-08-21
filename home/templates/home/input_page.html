@@ -1,0 +1,85 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container p-3">
+    <div class="py-4">
+        <h4>Upload images of your clothing!</h4>
+    </div>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="" type="submit" id="yes" value="Submit Post">
+    </form>
+</div>
+    
+
+
+<div class="row">
+    <div class="col-md-10">
+    </div>
+    <div class="col">
+        <img style = "float:right ;" width = "175" height = "150" src="{% static 'images/teddy-bear.png' %}" alt="...">
+    </div>
+</div>
+    <div class="row">
+    <div class = "flexbox-container px-5" >
+        <div class = "flexbox-item flexbox-item-1">
+
+        <h5 style = "margin-right:250px">recent uploads</h5>
+        <div class="row">
+            
+            {% for img in prev %}
+            <img class="col-md mx-3" style = "border:5px solid #555;" width = "100" height = "100" src="{{ img.clothing.url }}" alt="...">
+            {% endfor %}
+            <div class="col-md-2"><a href="upload.html" class="button " style="background-color:#D0C462; margin-top:20px; font-size:15px; margin-right:130px;">Upload Multiple</a></div>
+            <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+            {% for img in prev %}
+            <p class="col-md mx-3">
+                {{ img.colour }}
+                {{ img.article }}
+            </p>
+            {% endfor %}
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+        
+        </div>
+    </div>
+        <div class = "flexbox-item flexbox-item-1">
+        <br/>
+        <div><h3 class = "display-1" style = "font-size:30px">  Clothing Details</h3></div>
+        <br/>
+
+        <div class="input-group input-group-sm mb-3">
+
+            <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <br/>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Type</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <br/>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Colour</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <br/>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Notes</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
