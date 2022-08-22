@@ -1,5 +1,8 @@
 # pocket-wardrobe
 
+**Top 8 finalist competing amongst 300 others for Hack The 6ix 2022**  
+**Winner of Best use of AI**
+
 ## Inspiration  
 Some of the most famous people wear the same clothes every day: Steve Jobs, Mark Zuckerburg, Baoze Lin, 
 Derron Li, and while I would love to be famous, I rather, you know, not wear the same clothes every day; fashion is important. Just kidding. 
