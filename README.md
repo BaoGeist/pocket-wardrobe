@@ -1,7 +1,8 @@
 # pocket-wardrobe
 
 🏆 **Top 8 finalist competing amongst 300 others for Hack The 6ix 2022**  
-🏆 **Winner of Best use of AI**
+🏆 **Winner of Best use of AI**  
+:link: [Demo Here](https://devpost.com/software/pocket-wardrobe)
 
 ## Inspiration  
 Some of the most famous people wear the same clothes every day: Steve Jobs, Mark Zuckerburg, Baoze Lin, 
